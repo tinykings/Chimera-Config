@@ -1,0 +1,19 @@
+INTERVAL: 1.0
+
+SENSORS:
+  - name: "GPU"
+    driver_name: "amdgpu"
+    temp_input: "temp1_input"
+
+FANS:
+  - name: "GPU Cooler"
+    driver_name: "amdgpu"
+    handle: "pwm1"
+    fan_input: "fan1_input"
+    sensors:
+      - name: "GPU"
+        curve: [
+         [60, 30],
+         [75, 70],
+         [85, 100]
+        ]
