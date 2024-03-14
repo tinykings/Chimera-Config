@@ -20,3 +20,4 @@ pacman -U --noconfirm sunshine.pkg.tar.zst
 cp sunshine.service ~/.config/systemd/user/
 systemctl --user enable sunshine
 setcap cap_sys_admin+p $(readlink -f $(which sunshine))
+systemctl --user start sunshine
