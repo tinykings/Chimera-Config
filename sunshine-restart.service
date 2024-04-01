@@ -1,1 +1,10 @@
-.
+[Unit]
+Description=Restart sunshine after suspend
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/systemctl --user restart sunshine
+
+[Install]
+WantedBy=suspend.target
