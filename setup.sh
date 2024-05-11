@@ -5,8 +5,8 @@ sudo frzr-unlock
 wget https://github.com/LizardByte/Sunshine/releases/latest/download/sunshine.pkg.tar.zst
 sudo pacman -U --noconfirm sunshine.pkg.tar.zst
 sudo setcap cap_sys_admin+p $(readlink -f $(which sunshine))
-cp sunshine.service ~/.config/systemd/user/
-cp sunshine-restart.service ~/.config/systemd/user/
+cp sunshine.service /home/gamer/.config/systemd/user/
+cp sunshine-restart.service /home/gamer/.config/systemd/user/
 systemctl --user enable sunshine
 systemctl --user enable sunshine-restart
 sudo setcap cap_sys_admin+p $(readlink -f $(which sunshine))
