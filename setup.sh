@@ -8,6 +8,10 @@ sudo setcap cap_sys_admin+p $(readlink -f $(which sunshine))
 cp sunshine.service /home/gamer/.config/systemd/user/
 cp sunshine-restart.service /home/gamer/.config/systemd/user/
 systemctl --user enable sunshine
+cp suspend@.service /etc/systemd/system
+sudo systemctl daemon-reload && sudo systemctl enable suspend@$(whoami)
+cp suspend.target ~/.config/systemd/user
+systemctl --user daemon-reload
 systemctl --user enable sunshine-restart
 sudo setcap cap_sys_admin+p $(readlink -f $(which sunshine))
 systemctl --user start sunshine
