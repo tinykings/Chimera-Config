@@ -1,4 +1,8 @@
-Files to configure new ChimeraOS build, or after update. Fan control and Sunshine streaming.
+Files to configure new ChimeraOS build, or after update.
+
+- Fan Control
+- Sunshine Streaming
+- Decky Loader
 
 ```
 git clone https://github.com/tinykings/Chimera-Config.git
