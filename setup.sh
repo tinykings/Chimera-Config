@@ -1,8 +1,9 @@
 #!/bin/bash
 
-## Sunshine ##
-# unlock os
+## OS Unlock ##
 frzr-unlock
+
+## Sunshine ##
 # get install latest sunshine
 wget https://github.com/LizardByte/Sunshine/releases/latest/download/sunshine.pkg.tar.zst
 pacman -U --noconfirm sunshine.pkg.tar.zst
@@ -27,3 +28,7 @@ cp hhfc-resume.service /etc/systemd/system/
 systemctl enable hhfc.service
 systemctl start hhfc.service
 systemctl enable hhfc-resume.service
+
+## Decky Loader ##
+curl -L https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/install_release.sh | sh
+
