@@ -4,6 +4,7 @@ StartLimitIntervalSec=500
 StartLimitBurst=5
 
 [Service]
+ExecStartPre=/home/gamer/.config/systemd/user/uptime-check.sh
 ExecStart=/usr/bin/sunshine
 Restart=on-failure
 RestartSec=5s
