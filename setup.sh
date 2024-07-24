@@ -11,6 +11,8 @@ cp sunshine.service /home/gamer/.config/systemd/user/
 cp sunshine-restart.service /home/gamer/.config/systemd/user/
 cp suspend@.service /etc/systemd/system
 cp suspend.target /home/gamer/.config/systemd/user/
+cp uptime-check.sh /home/gamer/.config/systemd/user/
+chmod +x /home/gamer/.config/systemd/user/uptime-check.sh
 systemctl daemon-reload && sudo systemctl enable suspend@$(whoami)
 machinectl shell gamer@ /bin/bash -c 'systemctl --user daemon-reload'
 machinectl shell gamer@ /bin/bash -c 'systemctl --user enable sunshine'
